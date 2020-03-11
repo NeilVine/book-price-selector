@@ -3,6 +3,26 @@ A first project when learning Python...
 Use of Python with SQLite to retrieve, store and 
 compare book prices from multiple sellers, by scraping websites.
 
+Details of solution:
+website_html_provider.py
+    Encapsulates the request and conversion to BeautifulSoup
+
+scrape_seller1.py, scrape_seller2.py,  scrape_seller1.py 
+    A file per seller (website).
+    Each makes use of website_html_provider.py
+    Each reads the price from the specific location that the seller uses wthin the website_html_provider
+
+database_layer.py
+    Abstracts the database implementation from the rest of the solution.
+    Provides methods to access and write data. 
+
+compare_prices.py
+    Contains the logic of the application.
+    Asks the user to select a book.
+    Scrapes the prices from each seller and stores them (in the database).
+    Reads the values from the database.
+    Presents the user with details of the seller offering the best price.    
+
 Do not srcape websites or use this code; this is merely an example of what is possible.
 
 Disclaimer:
