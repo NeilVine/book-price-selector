@@ -1,5 +1,3 @@
-A first project when learning Python...
-
 Use of Python with SQLite to retrieve, store and 
 compare book prices from multiple sellers, by scraping websites.
 
